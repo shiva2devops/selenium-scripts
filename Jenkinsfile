@@ -12,7 +12,7 @@ pipeline {
         stage('Build') {
             steps {
                 // Build your Maven project
-                sh 'mvn clean test'
+                bat 'mvn clean test'
             }
         }
     }
