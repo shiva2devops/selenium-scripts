@@ -17,10 +17,10 @@ pipeline {
         }
     }
 
-    // post {
-    //     always {
-    //         // Archive test results
-    //         junit 'target/surefire-reports/*.xml'
-    //     }
-    // }
+    post {
+        always {
+            // Archive test results
+            junit 'target/surefire-reports/*.xml'
+        }
+    }
 }
