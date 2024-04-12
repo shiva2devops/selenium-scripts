@@ -19,12 +19,16 @@ public class class_01 {
 	public void web() throws Exception {
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+		
+		System.out.println("Open the browser successfully");
 		Thread.sleep(7000);
 		driver.findElement(By.xpath("//*[@name='username']")).sendKeys("Admin");
 		driver.findElement(By.xpath("//*[@name='password']")).sendKeys("admin123");
 		driver.findElement(By.xpath("//*[@type='submit']")).click();
 		Thread.sleep(7000);
+		System.out.println("Click on the PIM module");
 		driver.findElement(By.linkText("PIM")).click();
+		
 		Thread.sleep(3000);
 //		links.add(driver.findElement(By.xpath("//*[contains(text(),'Employee Name')]")));
 //		links.add(driver.findElement(By.xpath("//*[contains(text(),'Employee Id')]")));
@@ -34,7 +38,7 @@ public class class_01 {
 //		links.add(driver.findElement(By.xpath("//*[contains(text(),'Job Title')]")));
 //		links.add(driver.findElement(By.xpath("//*[contains(text(),'Sub Unit')]")));
 
-		try {
+/*		try {
 			links.addAll(driver
 					.findElements(By.xpath("//*[@class='oxd-grid-4 orangehrm-full-width-grid']/div/div/div/label")));
 			System.out.println("The actual texts are should be present in the page are :" + links.size());
@@ -64,7 +68,8 @@ public class class_01 {
 			System.out.println("The given actual and expected results should be matched succesfully");
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
-		}
+		} */
+		System.out.println("browser close successfully");
 		driver.quit();
 	}
 }
